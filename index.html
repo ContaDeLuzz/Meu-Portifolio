@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Portfólio de ContaDeLuz</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
+
+        :root {
+            --cor-principal: #6E859F;
+            --cor-secundaria: #C2E5FF;
+            --cor-destaque: #2b2ffc;
+        }
+
+        body {
+            font-family: 'Chakra Petch', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        h1, h2, h5 {
+            color: var(--cor-secundaria);
+            font-weight: 700;
+        }
+
+        .lead, .btn-link {
+            color: var(--cor-destaque);
+            font-weight: 700;
+        }
+
+        a, .btn-link:hover {
+            color: var(--cor-principal);
+        }
+
+        a:hover {
+            color: var(--cor-destaque);
+        }
+
+        .badge {
+            font-size: 1rem;
+        }
+
+        .card {
+            background-color: #111;
+            color: #fff;
+            border: 1px solid #333;
+        }
+
+        .modal-content {
+            background-color: #111;
+            color: #fff;
+        }
+
+        footer a {
+            color: var(--cor-principal);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--cor-destaque);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container text-center py-5">
+        <img src="data:image/jpeg;base64,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i9F0sbT4DSPkNiWGGMEtN+U0htt2+6tgxTeu5mfuXtq0xER9kRwhan0TaGofHTRRPjZja5jGRkEWNnWABBGRB51z473rl5d9Gt6Vti5talE8FNAyBrZnsvO2R5aTfkgsDCzI55Fx9fQo4jNauT3ezfh+E58HNb1+zt8b8QBG8A9q64ncbedManT0pQICAgICAgICAgICAgICAgICAgINN1y0O57JLA2c19iBfNzTcHmzXBlxzW+4jo9bheIjw5pPppouo+loqJ0jKp7YWVLYqmF8hDWPxxMErcZ5Ic142E71fNWbxEx5dHNimKTMS3HxpoMWPwujx2tj42nx22Wx3vayrzZuXl66W5cO99Pu199WzSekqfwd3GU9HjkkkaLxulcA2NjX/Wc0cq4yzSInHjnfeSZjJeNdoXtZx4HX0+kCDxXFup6lwBOBpOOOQgfVDr3O7LoUY/epNPPvBk928X+kpga06PfhJq6NxabtxSQEtP6OI3aVNJzVjUbLRitO5n8oXXLT8FVTmkpZo556lzYw2J4ksC8F73lhOFobiuSpxVtW3NaOyuW1bV5a+bL1M0aZWF7QbOlltlk1ole0Enqas70tkvqHXXiK48HL+/1dLa2wAG5ejHR5EztVECAgICAgICAgICAgICAgICAgICAg5xqe1rqU07wHGmmlgc0gG3FyODMj+gWrz8sct509HHq1Y2kqtlLTtxythjaDbE5rGi52C9tqpE2lea1jyYo1mpSA2GeBzrgNYXhgOewG1gebpsomlvRatq71Mrkun4onFtS+OF1hZjpGmS2ebmjIDm271Fa2nyTeaR2nb3RVNHUkiIwykC5ADCQDlci17dKvPNVnqtl2skipIZZgxrAxjnnC0C+EE7hnsVY3adSnURHRMakUhh0dSMd5QgjLvvOaHO+JK9OOzzLTuU2pQICAgICAgICAgICAgICAgICAgICAg4jr9LPorSz54HWZUBsljmx5aA17HDeQRivtHGCxzWOWkT3dOG+oeNZdPU+km0cYcWl07eNbY3jDrMPKIwnyjY/s2LnpWablva0W0manUGnucEDSOmedp9d8YPwWXi5PJvGPFMddx+f7w8UupVO8Y2wxkO2EVM8gy5i0NJ2ecni5O0nh4fKZn6RH95R0bKbRWlc3YInU1z5bg1zneSNrrHiwRe/lDoWvW9GPStkTpnT0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" alt="Avatar de ContaDeLuz" class="rounded-circle mb-3">
+        <p class="lead">Olá, eu sou ContaDeLuz</p>
+        <h1>Desenvolvedor</h1>
+        <p>Com formação em Engenharia da Computação.</p>
+        <p>Principais habilidades:</p>
+        <div>
+            <p class="badge bg-secondary">HTML</p>
+            <p class="badge bg-secondary">CSS</p>
+            <p class="badge bg-secondary">JavaScript</p>
+            <p class="badge bg-secondary">Scratch</p>
+            <p class="badge bg-secondary">Java</p>
+        </div>
+    </header>
+
+    <main class="container mt-5">
+        <h2 class="text-center mb-4">Projetos em Destaque</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x250/?books,library" class="card-img-top" alt="Projeto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Minha Biblioteca Virtual</h5>
+                        <p class="card-text">Página personalizada com meus livros favoritos, com design leve e links de compra.</p>
+                        <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal1">Ver mais</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x250/?ai,technology" class="card-img-top" alt="Projeto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Futuro com IA</h5>
+                        <p class="card-text">Jogo interativo que simula decisões sobre Inteligência Artificial e ética.</p>
+                        <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal2">Ver mais</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x250/?space,universe" class="card-img-top" alt="Projeto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Aventura no Espaço</h5>
+                        <p class="card-text">Projeto interativo com Scratch sobre astronomia e descobertas espaciais.</p>
+                        <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal3">Ver mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal" id="modal1" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Minha Biblioteca Virtual</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Este projeto é uma vitrine pessoal de livros, com layout limpo e responsivo.</p>
+                    <img src="https://source.unsplash.com/600x400/?books" class="img-fluid" alt="Projeto 1">
+                </div>
+                <div class="modal-footer">
+                    <a href="https://femascheti.github.io/minhas-leituras/">Ver ao vivo</a>
+                    <a href="https://github.com/femascheti/minhas-leituras">Ver código</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal2" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Futuro com IA</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Um jogo de narrativa sobre o impacto da IA nas nossas decisões e sociedade.</p>
+                    <img src="https://source.unsplash.com/600x400/?robot" class="img-fluid" alt="Projeto 2">
+                </div>
+                <div class="modal-footer">
+                    <a href="https://femascheti.github.io/tecnicas-computacionais-refletindo-sobre-ia/">Ver ao vivo</a>
+                    <a href="https://github.com/femascheti/tecnicas-computacionais-refletindo-sobre-ia">Ver código</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal3" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Aventura no Espaço</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Um projeto interativo com Scratch que ensina astronomia com diversão e criatividade.</p>
+                    <img src="https://source.unsplash.com/600x400/?galaxy" class="img-fluid" alt="Projeto 3">
+                </div>
+                <div class="modal-footer">
+                    <a href="https://scratch.mit.edu/projects/951732825/">Ver projeto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container py-5 text-center">
+        <h2>Contato</h2>
+        <div class="mb-3">
+            <i class="bi bi-github"></i>
+            <a href="https://github.com/femascheti">GitHub</a>
+        </div>
+        <p>© 2025 ContaDeLuz</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
